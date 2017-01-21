@@ -21,20 +21,30 @@ Ext.define('FontPackagesViewer.view.main.Main', {
 
     items: [
         {
+            title: 'Icon54',
+            reference: 'Icon54all',
+            iconCls: 'x-i54c i54c-you-rock',
+            layout: 'fit',
+            scrollable: 'y',
+            bodyPadding: 20
+        },
+        // {
+        //     title: 'Icon54com',
+        //     reference: 'Icon54com',
+        //     //iconCls: 'fa-home',
+        //     layout: 'fit',
+        //     scrollable: 'y',
+        //     bodyPadding: 20
+        // },
+        {
             title: 'LinearIcons',
             reference: 'LinearIcons',
             iconCls: 'x-li li-diamond3',
             layout: 'fit',
             scrollable: 'y',
             bodyPadding: 20
-        },
-        {
-            title: 'Icon54',
-            reference: 'Icon54',
-            //iconCls: 'fa-home',
-            layout: 'fit',
-            scrollable: 'y'
         }
+
     ],
 
     listeners: {

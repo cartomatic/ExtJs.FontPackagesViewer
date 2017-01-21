@@ -65,7 +65,9 @@
      *      ]
      */
     "requires": [
-        "linear-icons"
+        "linear-icons",
+        "icon-54",
+        "icon-54-com"
     ],
 
     /**

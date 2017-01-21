@@ -44,7 +44,7 @@ Ext.define('FontPackagesViewer.view.main.MainController', {
         store.load();
     },
 
-    onIconsStoreLoad: function(store, records, succesful, op, eOpts){
+    onIconsStoreLoad: function(store, records, successful, op, eOpts){
 
         if(!successful){
             return;
@@ -64,6 +64,7 @@ Ext.define('FontPackagesViewer.view.main.MainController', {
         //generate html
         var html = '';
         Ext.Array.each(Ext.Object.getKeys(groups), function(group){
+            html += '<div style="display: inline-block; width: 100%;">';
            html += '<h3 class="iconGroup">' + (group === 'group_name' ? 'All icons' : group) + '</h3>';
             Ext.Array.each(groups[group], function(icon){
               html +=
@@ -72,8 +73,9 @@ Ext.define('FontPackagesViewer.view.main.MainController', {
                         '<div class="icon ' + icon.get('iconCls') + '"></div><div class="iconCode">' + icon.get('fontCode') +'</div>' +
                     '</div>' +
                     '<div class="iconName">' + icon.get('name') + '</div><br/>' +
-                '</div>'
+                '</div>';
            });
+            html += '</div>';
         });
 
         //and push it into tabpanels html
